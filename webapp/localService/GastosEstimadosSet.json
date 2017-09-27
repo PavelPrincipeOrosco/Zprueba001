@@ -1,0 +1,85 @@
+[{
+	"ID": "GE1",
+	"NumeroSol": "1",
+	"Categoria": "2",
+	"SubCategoria": "1",
+	"___FK_0962e4b6cb0ca4570e55e034": "SO1",
+	"Monto": 4707.42
+}, {
+	"ID": "GE2",
+	"NumeroSol": "1",
+	"Categoria": "2",
+	"SubCategoria": "2",
+	"___FK_0962e4b6cb0ca4570e55e034": "SO1",
+	"Monto": 5784.94
+}, {
+	"ID": "GE3",
+	"NumeroSol": "1",
+	"Categoria": "2",
+	"SubCategoria": "3",
+	"___FK_0962e4b6cb0ca4570e55e034": "SO1",
+	"Monto": 2147.18
+}, {
+	"ID": "GE4",
+	"NumeroSol": "2",
+	"Categoria": "2",
+	"SubCategoria": "1",
+	"___FK_0962e4b6cb0ca4570e55e034": "S02",
+	"Monto": 3662.29
+}, {
+	"ID": "GE5",
+	"NumeroSol": "2",
+	"Categoria": "2",
+	"SubCategoria": "2",
+	"___FK_0962e4b6cb0ca4570e55e034": "S02",
+	"Monto": 767.47
+}, {
+	"ID": "GE6",
+	"NumeroSol": "2",
+	"Categoria": "2",
+	"SubCategoria": "3",
+	"___FK_0962e4b6cb0ca4570e55e034": "S02",
+	"Monto": 3438.55
+}, {
+	"ID": "GE7",
+	"NumeroSol": "3",
+	"Categoria": "2",
+	"SubCategoria": "1",
+	"___FK_0962e4b6cb0ca4570e55e034": "S03",
+	"Monto": 919.83
+}, {
+	"ID": "GE8",
+	"NumeroSol": "3",
+	"Categoria": "2",
+	"SubCategoria": "2",
+	"___FK_0962e4b6cb0ca4570e55e034": "S03",
+	"Monto": 962.13
+}, {
+	"ID": "GE9",
+	"NumeroSol": "3",
+	"Categoria": "2",
+	"SubCategoria": "3",
+	"___FK_0962e4b6cb0ca4570e55e034": "S03",
+	"Monto": 2056.44
+}, {
+	"ID": "GE10",
+	"NumeroSol": "4",
+	"Categoria": "2",
+	"SubCategoria": "1",
+	"___FK_0962e4b6cb0ca4570e55e034": "SO4",
+	"Monto": 3910.94
+}, {
+	"ID": "GE11",
+	"NumeroSol": "4",
+	"Categoria": "2",
+	"SubCategoria": "2",
+	"___FK_0962e4b6cb0ca4570e55e034": "SO4",
+	"Monto": 2688.81
+}, {
+	"ID": "GE12",
+	"NumeroSol": "4",
+	"Categoria": "2",
+	"SubCategoria": "3",
+	"___FK_0962e4b6cb0ca4570e55e034": "SO4",
+	"Monto": 5000.87
+}]

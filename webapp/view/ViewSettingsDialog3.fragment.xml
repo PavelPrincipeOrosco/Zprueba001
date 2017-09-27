@@ -1,0 +1,93 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<ViewSettingsDialog>
+		<filterItems>
+			<ViewSettingsFilterItem text="CiudadOrigen" key="CiudadOrigen" items="{path: '/CiudadOrigen'}">
+				<items>
+					<ViewSettingsItem key="String___CiudadOrigen___{}" text="{}"></ViewSettingsItem>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="CiudadDestino" key="CiudadDestino" items="{path: '/CiudadDestino'}">
+				<items>
+					<ViewSettingsItem key="String___CiudadDestino___{}" text="{}"></ViewSettingsItem>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsCustomItem text="FechaInicio"
+				filterCount="{parts:[{path:'/FechaInicio/vValueLT'}, {path:'/FechaInicio/vValueGT'}], formatter:'.filterCountFormatter'}">
+				<customControl>
+					<l:VerticalLayout width="100%">
+						<Toolbar>
+							<Label width="25%" text="Before" class="sapUiSmallMarginBegin"/>
+							<DatePicker width="33%" value="{path: '/FechaInicio/vValueLT'}" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd"/>
+						</Toolbar>
+						<Toolbar>
+							<Label width="25%" text="After" class="sapUiSmallMarginBegin"/>
+							<DatePicker width="33%" value="{path: '/FechaInicio/vValueGT'}" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd"/>
+						</Toolbar>
+					</l:VerticalLayout>
+				</customControl>
+			</ViewSettingsCustomItem>
+			<ViewSettingsCustomItem text="FechaFin"
+				filterCount="{parts:[{path:'/FechaFin/vValueLT'}, {path:'/FechaFin/vValueGT'}], formatter:'.filterCountFormatter'}">
+				<customControl>
+					<l:VerticalLayout width="100%">
+						<Toolbar>
+							<Label width="25%" text="Before" class="sapUiSmallMarginBegin"/>
+							<DatePicker width="33%" value="{path: '/FechaFin/vValueLT'}" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd"/>
+						</Toolbar>
+						<Toolbar>
+							<Label width="25%" text="After" class="sapUiSmallMarginBegin"/>
+							<DatePicker width="33%" value="{path: '/FechaFin/vValueGT'}" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd"/>
+						</Toolbar>
+					</l:VerticalLayout>
+				</customControl>
+			</ViewSettingsCustomItem>
+			<ViewSettingsFilterItem text="Estado" key="Estado" items="{path: '/Estado'}">
+				<items>
+					<ViewSettingsItem key="String___Estado___{}" text="{}"></ViewSettingsItem>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="StatusText" key="StatusText" items="{path: '/StatusText'}">
+				<items>
+					<ViewSettingsItem key="String___StatusText___{}" text="{}"></ViewSettingsItem>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="StatusIcon" key="StatusIcon" items="{path: '/StatusIcon'}">
+				<items>
+					<ViewSettingsItem key="String___StatusIcon___{}" text="{}"></ViewSettingsItem>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="TipoSol" key="TipoSol" items="{path: '/TipoSol'}">
+				<items>
+					<ViewSettingsItem key="String___TipoSol___{}" text="{}"></ViewSettingsItem>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="NomSol" key="NomSol" items="{path: '/NomSol'}">
+				<items>
+					<ViewSettingsItem key="String___NomSol___{}" text="{}"></ViewSettingsItem>
+				</items>
+			</ViewSettingsFilterItem>
+		</filterItems>
+		<sortItems>
+			<ViewSettingsItem text="CiudadOrigen" key="CiudadOrigen"/>
+			<ViewSettingsItem text="CiudadDestino" key="CiudadDestino"/>
+			<ViewSettingsItem text="FechaInicio" key="FechaInicio"/>
+			<ViewSettingsItem text="FechaFin" key="FechaFin"/>
+			<ViewSettingsItem text="Estado" key="Estado"/>
+			<ViewSettingsItem text="StatusText" key="StatusText"/>
+			<ViewSettingsItem text="StatusIcon" key="StatusIcon"/>
+			<ViewSettingsItem text="TipoSol" key="TipoSol"/>
+			<ViewSettingsItem text="NomSol" key="NomSol"/>
+		</sortItems>
+		<groupItems>
+			<ViewSettingsItem text="CiudadOrigen" key="CiudadOrigen"/>
+			<ViewSettingsItem text="CiudadDestino" key="CiudadDestino"/>
+			<ViewSettingsItem text="FechaInicio" key="FechaInicio"/>
+			<ViewSettingsItem text="FechaFin" key="FechaFin"/>
+			<ViewSettingsItem text="Estado" key="Estado"/>
+			<ViewSettingsItem text="StatusText" key="StatusText"/>
+			<ViewSettingsItem text="StatusIcon" key="StatusIcon"/>
+			<ViewSettingsItem text="TipoSol" key="TipoSol"/>
+			<ViewSettingsItem text="NomSol" key="NomSol"/>
+		</groupItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

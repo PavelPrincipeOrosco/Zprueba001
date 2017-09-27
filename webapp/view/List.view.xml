@@ -1,0 +1,280 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.zapp006.controller.List" xmlns:m="sap.m">
+	<m:Page showHeader="true" title="Travel Tasa" showFooter="false" showNavButton="false">
+		<m:content>
+			<m:IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+				selectedKey="Ok">
+				<m:items>
+					<m:IconTabFilter icon="sap-icon://travel-itinerary" iconColor="Default" text="Mis viajes" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<m:content>
+							<m:Table id="sap_Worklist_Page_0-content-sap_m_IconTabBar-1-items-sap_m_IconTabFilter-1-content-build_simple_Table-1" width="100%"
+								noDataText="No data" mode="SingleSelect" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+								itemPress="_onTableItemPress" items="{/SolicitudesSet}">
+								<m:infoToolbar>
+									<m:Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<m:content>
+											<m:Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:content>
+									</m:Toolbar>
+								</m:infoToolbar>
+								<m:headerToolbar>
+									<m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+										<m:content>
+											<m:ToolbarSpacer width=""/>
+											<m:SearchField placeholder="Search" showSearchButton="true" visible="true" width="60%" liveChange="_onSearchFieldLiveChange"/>
+											<m:Button text="Nuevo Viaje" type="Transparent" icon="sap-icon://travel-request" iconFirst="true" width="auto" enabled="true" visible="true"
+												iconDensityAware="false" press="_onButtonPress2"/>
+											<m:Button text="Nuevo Gasto" type="Transparent" icon="sap-icon://travel-expense-report" iconFirst="true" width="auto" enabled="true"
+												visible="true" iconDensityAware="false"/>
+											<m:Button text="" type="Default" icon="sap-icon://drop-down-list" iconFirst="true" width="auto" enabled="true" visible="true"
+												iconDensityAware="false" press="_onButtonPress3"/>
+										</m:content>
+										<m:tooltip/>
+									</m:Toolbar>
+								</m:headerToolbar>
+								<m:columns>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Ciudad Origen" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader"
+										mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Ciudad Destino" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Fecha Inicio" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Fecha Fin" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Estado" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Aprobador" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem type="Navigation">
+										<m:cells>
+											<m:Text text="{CiudadOrigen}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{CiudadDestino}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{path: 'FechaInicio', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1"
+												wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{path: 'FechaFin', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1"
+												wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:ObjectStatus text="{Estado}" state="{StatusText}" icon="{StatusIcon}"/>
+											<m:Text text="{Aprobador}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</m:content>
+					</m:IconTabFilter>
+					<m:IconTabFilter icon="sap-icon://approvals" iconColor="Default" text="Mis Aprobaciones" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<m:content>
+							<m:Table id="sap_Worklist_Page_0-content-sap_m_IconTabBar-1-items-sap_m_IconTabFilter-2-content-build_simple_Table-1502816187882"
+								width="100%" noDataText="No data" mode="SingleSelect" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="true"
+								itemPress="_onTableItemPress1" items="{/SolicitudesSet}">
+								<m:infoToolbar>
+									<m:Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<m:content>
+											<m:Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:content>
+									</m:Toolbar>
+								</m:infoToolbar>
+								<m:headerToolbar>
+									<m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+										<m:content>
+											<m:ToolbarSpacer width=""/>
+											<m:SearchField placeholder="Search" showSearchButton="true" visible="true" width="60%" liveChange="_onSearchFieldLiveChange1"/>
+											<m:Button text="Aprobar" type="Accept" icon="sap-icon://accept" iconFirst="true" width="auto" enabled="true" visible="true"
+												iconDensityAware="false" press="_onButtonPress4"/>
+											<m:Button text="Rechazar" type="Reject" icon="sap-icon://sys-cancel-2" iconFirst="true" width="auto" enabled="true" visible="true"
+												iconDensityAware="false" press="_onButtonPress5"/>
+											<m:Button text="" type="Default" icon="sap-icon://drop-down-list" iconFirst="true" width="auto" enabled="true" visible="true"
+												iconDensityAware="false" press="_onButtonPress6"/>
+										</m:content>
+										<m:tooltip/>
+									</m:Toolbar>
+								</m:headerToolbar>
+								<m:columns>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Ciudad Origen" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader"
+										mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Ciudad Destino" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Fecha Inicio" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Fecha Fin" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Solicitante" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Tipo. Aprob." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem type="Navigation">
+										<m:cells>
+											<m:Text text="{CiudadOrigen}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{CiudadDestino}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{path: 'FechaInicio', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1"
+												wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{path: 'FechaFin', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1"
+												wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{NomSol}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{TipoSol}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</m:content>
+					</m:IconTabFilter>
+					<m:IconTabFilter icon="sap-icon://list" iconColor="Default" text="Mis Consultas" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<m:content>
+							<m:Table id="sap_Worklist_Page_0-content-sap_m_IconTabBar-1-items-sap_m_IconTabFilter-1503086265060-content-build_simple_Table-1"
+								width="100%" noDataText="No data" mode="SingleSelect" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="true"
+								itemPress="_onTableItemPress2" items="{/SolicitudesSet}">
+								<m:infoToolbar>
+									<m:Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<m:content>
+											<m:Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:content>
+									</m:Toolbar>
+								</m:infoToolbar>
+								<m:headerToolbar>
+									<m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+										<m:content>
+											<m:ToolbarSpacer width=""/>
+											<m:SearchField placeholder="Search" showSearchButton="true" visible="true" width="60%" liveChange="_onSearchFieldLiveChange2"/>
+											<m:Button text="" type="Default" icon="sap-icon://drop-down-list" iconFirst="true" width="auto" enabled="true" visible="true"
+												iconDensityAware="false" press="_onButtonPress7"/>
+										</m:content>
+										<m:tooltip/>
+									</m:Toolbar>
+								</m:headerToolbar>
+								<m:columns>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Ciudad Origen" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader"
+										mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Ciudad Destino" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Fecha Inicio" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Fecha Fin" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Estado" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Tipo. Sol" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+									<m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<m:header>
+											<m:Text text="Solicitante" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:header>
+										<m:footer/>
+									</m:Column>
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem type="Navigation">
+										<m:cells>
+											<m:Text text="{CiudadOrigen}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{CiudadDestino}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{path: 'FechaInicio', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1"
+												wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{path: 'FechaFin', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1"
+												wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:ObjectStatus text="{Estado}" state="{StatusText}" icon="{StatusIcon}"/>
+											<m:Text text="{TipoSol}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											<m:Text text="{NomSol}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</m:content>
+					</m:IconTabFilter>
+				</m:items>
+				<m:content/>
+			</m:IconTabBar>
+		</m:content>
+		<m:footer>
+			<m:Bar design="Auto">
+				<m:contentLeft/>
+				<m:contentMiddle/>
+				<m:contentRight>
+					<m:Button text="" type="Default" icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true"
+						iconDensityAware="false"/>
+				</m:contentRight>
+			</m:Bar>
+		</m:footer>
+		<m:headerContent/>
+		<m:subHeader/>
+		<m:customHeader/>
+	</m:Page>
+</mvc:View>

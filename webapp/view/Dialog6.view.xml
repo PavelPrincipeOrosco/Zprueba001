@@ -1,0 +1,19 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.zapp006.controller.Dialog6" xmlns:m="sap.m">
+	<m:Dialog horizontalScrolling="true" showHeader="true" state="None" stretch="false" title="Aprobar/rechazar solicitud" type="Standard"
+		verticalScrolling="true">
+		<m:content>
+			<m:Input value="{ObsAtencionLiqui}" type="Text" showValueHelp="false" enabled="true" visible="true" width="100%" valueHelpOnly="false"
+				maxLength="0"/>
+		</m:content>
+		<m:beginButton/>
+		<m:buttons>
+			<m:Button text="OK" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+				press="_onButtonPress28"/>
+			<m:Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+				press="_onButtonPress29"/>
+		</m:buttons>
+		<m:customHeader/>
+		<m:endButton/>
+		<m:subHeader/>
+	</m:Dialog>
+</mvc:View>

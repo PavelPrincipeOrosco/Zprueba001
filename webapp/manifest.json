@@ -1,0 +1,247 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.2.0",
+		"id": "com.sap.build.standard.zapp006",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"main": {
+				"uri": "/here/goes/your/serviceUrl/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"ach": "ach",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.2.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "generated.app.view.InformeViaje",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.32.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"": {
+				"dataSource": "main",
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"loadMetadataAsync": false,
+					"json": true,
+					"bJSON": true,
+					"defaultBindingMode": "TwoWay",
+					"useBatch": true,
+					"refreshAfterChange": false,
+					"disableHeadRequestForToken": true
+				}
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.zapp006.view",
+				"controlId": "App",
+				"clearTarget": false,
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"List"
+					]
+				}
+			},
+			"targets": {
+				"List": {
+					"controlAggregation": "pages",
+					"viewName": "List",
+					"viewId": "List",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"Details": {
+					"controlAggregation": "pages",
+					"viewName": "Details",
+					"viewId": "Details",
+					"viewLevel": 6,
+					"transition": "slide"
+				},
+				"ItemEdit": {
+					"controlAggregation": "pages",
+					"viewName": "ItemEdit",
+					"viewId": "ItemEdit",
+					"viewLevel": 9,
+					"transition": "slide"
+				},
+				"ItemCrea": {
+					"controlAggregation": "pages",
+					"viewName": "ItemCrea",
+					"viewId": "ItemCrea",
+					"viewLevel": 8,
+					"transition": "slide"
+				},
+				"ItemEditGastos": {
+					"controlAggregation": "pages",
+					"viewName": "ItemEditGastos",
+					"viewId": "ItemEditGastos",
+					"viewLevel": 7,
+					"transition": "slide"
+				},
+				"DetailsGastos": {
+					"controlAggregation": "pages",
+					"viewName": "DetailsGastos",
+					"viewId": "DetailsGastos",
+					"viewLevel": 5,
+					"transition": "slide"
+				},
+				"ApprovViaje": {
+					"controlAggregation": "pages",
+					"viewName": "ApprovViaje",
+					"viewId": "ApprovViaje",
+					"viewLevel": 4,
+					"transition": "slide"
+				},
+				"ApprovGasto": {
+					"controlAggregation": "pages",
+					"viewName": "ApprovGasto",
+					"viewId": "ApprovGasto",
+					"viewLevel": 3,
+					"transition": "slide"
+				},
+				"InformeViaje": {
+					"controlAggregation": "pages",
+					"viewName": "InformeViaje",
+					"viewId": "InformeViaje",
+					"viewLevel": 2,
+					"transition": "slide"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "List/:context:",
+					"name": "List",
+					"target": [
+						"List"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"List"
+					]
+				},
+				{
+					"pattern": "Details/:context:",
+					"name": "Details",
+					"target": [
+						"Details"
+					]
+				},
+				{
+					"pattern": "ItemEdit/:context:",
+					"name": "ItemEdit",
+					"target": [
+						"ItemEdit"
+					]
+				},
+				{
+					"pattern": "ItemCrea/:context:",
+					"name": "ItemCrea",
+					"target": [
+						"ItemCrea"
+					]
+				},
+				{
+					"pattern": "ItemEditGastos/:context:",
+					"name": "ItemEditGastos",
+					"target": [
+						"ItemEditGastos"
+					]
+				},
+				{
+					"pattern": "DetailsGastos/:context:",
+					"name": "DetailsGastos",
+					"target": [
+						"DetailsGastos"
+					]
+				},
+				{
+					"pattern": "ApprovViaje/:context:",
+					"name": "ApprovViaje",
+					"target": [
+						"ApprovViaje"
+					]
+				},
+				{
+					"pattern": "ApprovGasto/:context:",
+					"name": "ApprovGasto",
+					"target": [
+						"ApprovGasto"
+					]
+				},
+				{
+					"pattern": "InformeViaje/:context:",
+					"name": "InformeViaje",
+					"target": [
+						"InformeViaje"
+					]
+				}
+			]
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

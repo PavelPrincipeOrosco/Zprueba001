@@ -1,0 +1,19 @@
+[{
+	"ID": "SB1",
+	"DesSubCategoria": "Desayuno"
+}, {
+	"ID": "SB2",
+	"DesSubCategoria": "Almuerzo"
+}, {
+	"ID": "SB3",
+	"DesSubCategoria": "Cena"
+}, {
+	"ID": "SB4",
+	"DesSubCategoria": "Hospedaje"
+}, {
+	"ID": "SB5",
+	"DesSubCategoria": "Transporte"
+}, {
+	"ID": "SB6",
+	"DesSubCategoria": "Otros"
+}]

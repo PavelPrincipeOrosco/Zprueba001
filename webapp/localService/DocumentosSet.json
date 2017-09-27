@@ -1,0 +1,133 @@
+[{
+	"Ruc": "10412444782",
+	"ID": "DOC1",
+	"FechaGasto": "/Date(1495152000000)/",
+	"Tributario": true,
+	"TipoComprobante": "Boleta",
+	"SerieComprobante": "F00002",
+	"Correlativo": "000003",
+	"Importe": 890,
+	"Igv": true,
+	"___FK_2762a2079683a0b70e573f80": "SO1"
+}, {
+	"Ruc": "10412444783",
+	"ID": "DOC2",
+	"FechaGasto": "/Date(1495324800000)/",
+	"Tributario": false,
+	"TipoComprobante": "Ticket",
+	"SerieComprobante": "",
+	"Correlativo": "",
+	"Importe": 1000,
+	"Igv": false,
+	"___FK_2762a2079683a0b70e573f80": "SO1"
+}, {
+	"Ruc": "10412444784",
+	"ID": "DOC3",
+	"FechaGasto": "/Date(1495497600000)/",
+	"Tributario": true,
+	"TipoComprobante": "Factura",
+	"SerieComprobante": "F00001",
+	"Correlativo": "000001",
+	"Importe": 700,
+	"Igv": true,
+	"___FK_2762a2079683a0b70e573f80": "SO1"
+}, {
+	"Ruc": "10412444785",
+	"ID": "DOC4",
+	"FechaGasto": "/Date(1495152000000)/",
+	"Tributario": true,
+	"TipoComprobante": "Boleta",
+	"SerieComprobante": "F00002",
+	"Correlativo": "000003",
+	"Importe": 890,
+	"Igv": true,
+	"___FK_2762a2079683a0b70e573f80": "S02"
+}, {
+	"Ruc": "10412444786",
+	"ID": "DOC5",
+	"FechaGasto": "/Date(1495324800000)/",
+	"Tributario": false,
+	"TipoComprobante": "Ticket",
+	"SerieComprobante": "",
+	"Correlativo": "",
+	"Importe": 1000,
+	"Igv": false,
+	"___FK_2762a2079683a0b70e573f80": "S02"
+}, {
+	"Ruc": "104124447827",
+	"ID": "DOC6",
+	"FechaGasto": "/Date(1495497600000)/",
+	"Tributario": true,
+	"TipoComprobante": "Factura",
+	"SerieComprobante": "F00001",
+	"Correlativo": "000001",
+	"Importe": 700,
+	"Igv": true,
+	"___FK_2762a2079683a0b70e573f80": "S02"
+}, {
+	"Ruc": "10412444786",
+	"ID": "DOC7",
+	"FechaGasto": "/Date(1495152000000)/",
+	"Tributario": true,
+	"TipoComprobante": "Boleta",
+	"SerieComprobante": "F00002",
+	"Correlativo": "000003",
+	"Importe": 890,
+	"Igv": true,
+	"___FK_2762a2079683a0b70e573f80": "S03"
+}, {
+	"Ruc": "104124447821",
+	"ID": "DOC8",
+	"FechaGasto": "/Date(1495324800000)/",
+	"Tributario": false,
+	"TipoComprobante": "Ticket",
+	"SerieComprobante": "",
+	"Correlativo": "",
+	"Importe": 1000,
+	"Igv": false,
+	"___FK_2762a2079683a0b70e573f80": "S03"
+}, {
+	"Ruc": "10412444783",
+	"ID": "DOC9",
+	"FechaGasto": "/Date(1495497600000)/",
+	"Tributario": true,
+	"TipoComprobante": "Factura",
+	"SerieComprobante": "F00001",
+	"Correlativo": "000001",
+	"Importe": 700,
+	"Igv": true,
+	"___FK_2762a2079683a0b70e573f80": "S03"
+}, {
+	"Ruc": "10412444711",
+	"ID": "DOC10",
+	"FechaGasto": "/Date(1495152000000)/",
+	"Tributario": true,
+	"TipoComprobante": "Boleta",
+	"SerieComprobante": "F00002",
+	"Correlativo": "000003",
+	"Importe": 890,
+	"Igv": true,
+	"___FK_2762a2079683a0b70e573f80": "SO4"
+}, {
+	"Ruc": "10412444734",
+	"ID": "DOC11",
+	"FechaGasto": "/Date(1495324800000)/",
+	"Tributario": false,
+	"TipoComprobante": "Ticket",
+	"SerieComprobante": "",
+	"Correlativo": "",
+	"Importe": 1000,
+	"Igv": false,
+	"___FK_2762a2079683a0b70e573f80": "SO4"
+}, {
+	"Ruc": "10412444744",
+	"ID": "DOC12",
+	"FechaGasto": "/Date(1495497600000)/",
+	"Tributario": true,
+	"TipoComprobante": "Factura",
+	"SerieComprobante": "F00001",
+	"Correlativo": "000001",
+	"Importe": 700,
+	"Igv": true,
+	"___FK_2762a2079683a0b70e573f80": "SO4"
+}]

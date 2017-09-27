@@ -1,0 +1,13 @@
+[{
+	"DescCategoria": "Hospedaje",
+	"ID": "CA1"
+}, {
+	"DescCategoria": "Alimentacion",
+	"ID": "CA2"
+}, {
+	"DescCategoria": "Transporte",
+	"ID": "CA3"
+}, {
+	"DescCategoria": "Otros",
+	"ID": "CA4"
+}]

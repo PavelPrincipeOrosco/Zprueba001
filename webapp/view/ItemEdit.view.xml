@@ -1,0 +1,213 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.zapp006.controller.ItemEdit" xmlns:uxap="sap.uxap"
+	xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:form="sap.ui.layout.form">
+	<uxap:ObjectPageLayout showTitleInHeaderContent="false" showHeaderContent="true" showAnchorBar="true" showFooter="true"
+		subSectionLayout="TitleOnTop">
+		<uxap:headerContent>
+			<core:Icon src="sap-icon://travel-itinerary" size="48px" height="48px" width="48px" visible="true"/>
+			<m:ObjectStatus title="Estado de aprobación" text="{Estado}" state="{StatusText}" icon="{StatusIcon}"/>
+			<m:ObjectStatus title="Aprobador" text="{Aprobador}" state="None"/>
+			<m:ObjectStatus title="Solicitante" text="{NomSol}" state="None"/>
+		</uxap:headerContent>
+		<uxap:headerTitle>
+			<uxap:ObjectPageHeader objectImageURI="" objectTitle="" objectSubtitle="" headerDesign="Light" objectImageShape="Square"
+				isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" isActionAreaAlwaysVisible="true">
+				<uxap:actions/>
+				<uxap:breadCrumbsLinks/>
+				<uxap:navigationBar/>
+			</uxap:ObjectPageHeader>
+		</uxap:headerTitle>
+		<uxap:sections>
+			<uxap:ObjectPageSection showTitle="true" title="Gastos Estimados" titleUppercase="true" visible="true">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="" mode="Expanded">
+						<uxap:blocks>
+							<form:Form width="100%" editable="true" visible="true">
+								<form:title/>
+								<form:formContainers>
+									<form:FormContainer visible="true">
+										<form:formElements>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Ciudad Origen" design="Standard" width="80%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:ComboBox value="{CiudadOrigen}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="80%"
+														items="{/CiudadSet}">
+														<m:items>
+															<core:Item text="{Nombre}" enabled="true"/>
+														</m:items>
+													</m:ComboBox>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Fecha Inicio" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:DatePicker placeholder="" value="{path: 'FechaInicio', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"
+														enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Motivo" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:Input value="{Motivo}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+												</form:fields>
+											</form:FormElement>
+										</form:formElements>
+										<form:title/>
+									</form:FormContainer>
+									<form:FormContainer visible="true">
+										<form:formElements>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Ciudad Destino" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:ComboBox value="{CiudadDestino}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%"
+														items="{/CiudadSet}">
+														<m:items>
+															<core:Item text="{Nombre}" enabled="true"/>
+														</m:items>
+													</m:ComboBox>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Fecha Fin" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:DatePicker placeholder="" value="{path: 'FechaFin', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}"
+														enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Centro Costo" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:Input value="{CentroCoste}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false"
+														maxLength="0"/>
+												</form:fields>
+											</form:FormElement>
+										</form:formElements>
+										<form:title/>
+									</form:FormContainer>
+									<form:FormContainer visible="true">
+										<form:formElements>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Moneda" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:Input value="{Moneda}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Observación" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:TextArea value="{ObservacionViaje}" rows="2" cols="20" maxLength="0" wrapping="None" visible="true"/>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Adelanto" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:CheckBox text="" selected="{FlagAdelanto}" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"/>
+												</form:fields>
+											</form:FormElement>
+										</form:formElements>
+										<form:title/>
+									</form:FormContainer>
+									<form:FormContainer visible="true">
+										<form:formElements>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Alimentación" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:CheckBox text="" selected="{FlagAlimentacion}" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"/>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="" design="Standard" width="400px" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:CheckBox text="Desayuno (12 PEN)" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"/>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:CheckBox text="Almuerzo (20 PEN)" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"/>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:CheckBox text="Cena (15 PEN)" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"/>
+												</form:fields>
+											</form:FormElement>
+										</form:formElements>
+										<form:title/>
+									</form:FormContainer>
+									<form:FormContainer visible="true">
+										<form:formElements>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Hospedaje (60 PEN)" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:CheckBox text="" selected="{FlagHospedaje}" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"/>
+												</form:fields>
+											</form:FormElement>
+											<form:FormElement visible="true">
+												<form:label>
+													<m:Label text="Otros" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+												</form:label>
+												<form:fields>
+													<m:CheckBox text="" selected="{FlagOtros}" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"/>
+													<m:Input value="{path: 'MontoOtros', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" type="Text"
+														showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+												</form:fields>
+											</form:FormElement>
+										</form:formElements>
+										<form:title/>
+									</form:FormContainer>
+								</form:formContainers>
+								<form:layout>
+									<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="3" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+								</form:layout>
+							</form:Form>
+						</uxap:blocks>
+						<uxap:moreBlocks/>
+						<uxap:actions/>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+				<uxap:customAnchorBarButton/>
+			</uxap:ObjectPageSection>
+		</uxap:sections>
+		<uxap:footer>
+			<m:Bar design="Footer">
+				<m:contentLeft/>
+				<m:contentMiddle/>
+				<m:contentRight>
+					<m:Button text="Guardar" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+						press="_onButtonPress9"/>
+					<m:Button text="Cancelar" type="Reject" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+						press="_onButtonPress10"/>
+				</m:contentRight>
+			</m:Bar>
+		</uxap:footer>
+	</uxap:ObjectPageLayout>
+</mvc:View>

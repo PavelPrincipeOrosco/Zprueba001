@@ -1,0 +1,80 @@
+{
+  "dataBinding": {
+    "/webapp/view/List.view.xml": {
+      "entitySet": ""
+    },
+    "/webapp/view/Details.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/ItemEdit.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/ItemCrea.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/ItemEditGastos.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/DetailsGastos.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/ApprovViaje.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/ApprovGasto.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/InformeViaje.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/Dialog3.view.xml": {
+      "entitySet": ""
+    },
+    "/webapp/view/Dialog11.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/Dialog10.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/Dialog2.view.xml": {
+      "entitySet": "/GastosEstimadosSet"
+    },
+    "/webapp/view/Dialog5.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/Dialog9.view.xml": {
+      "entitySet": ""
+    },
+    "/webapp/view/Dialog8.view.xml": {
+      "entitySet": "/DocumentosSet"
+    },
+    "/webapp/view/Dialog4.view.xml": {
+      "entitySet": "/DocumentosSet"
+    },
+    "/webapp/view/Dialog6.view.xml": {
+      "entitySet": "/SolicitudesSet"
+    },
+    "/webapp/view/Dialog1.view.xml": {
+      "entitySet": "/GastosEstimadosSet"
+    }
+  },
+  "generation": [
+    {
+      "templateId": "build_import_prototype",
+      "templateVersion": "1.0.0",
+      "dateTimeStamp": "Wed, 27 Sep 2017 21:40:26 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "hcpdeploy": {
+    "account": "p808965trial",
+    "name": "zapp007",
+    "lastVersionWeTriedToDeploy": "1.0.0"
+  }
+}

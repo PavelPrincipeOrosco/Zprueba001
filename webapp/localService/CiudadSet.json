@@ -1,0 +1,31 @@
+[{
+	"Nombre": "Lima",
+	"ID": "C1"
+}, {
+	"Nombre": "Tacna",
+	"ID": "C2"
+}, {
+	"Nombre": "Chimbote",
+	"ID": "C3"
+}, {
+	"Nombre": "Piura",
+	"ID": "C4"
+}, {
+	"Nombre": "Arequipa",
+	"ID": "C5"
+}, {
+	"Nombre": "Ilo",
+	"ID": "C6"
+}, {
+	"Nombre": "Callao",
+	"ID": "C7"
+}, {
+	"Nombre": "Moquegua",
+	"ID": "C8"
+}, {
+	"Nombre": "Chiclayo",
+	"ID": "C9"
+}, {
+	"Nombre": "Trujillo",
+	"ID": "C10"
+}]

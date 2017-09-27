@@ -1,0 +1,10 @@
+[{
+	"ID": "TCO1",
+	"TipoComprobante": "Factura"
+}, {
+	"ID": "TCO2",
+	"TipoComprobante": "Boleta"
+}, {
+	"ID": "TCO3",
+	"TipoComprobante": "Ticket"
+}]
